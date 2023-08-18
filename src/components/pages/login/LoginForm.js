@@ -12,7 +12,7 @@ export default function LoginForm() {
         event.preventDefault();
         // alert(`bonjour ${inputValue}`)
         setInputValue("")
-        navigate(`/order/${inputValue}`)
+        navigate(`/orderpage/${inputValue}`)
     }
 
     const handleChange = (event) => {
