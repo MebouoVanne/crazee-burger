@@ -8,7 +8,7 @@ function OrderPage(props) {
 
     return (
         <Fragment>
-            <div>Bonjour {username} </div>
+            <h1>Bonjour {username} </h1>
            <Link to="/">
               <button > Deconnexion </button>
            </Link> 
