@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import styled from "styled-components";
+import Navbar from './Navbar';
+import Main from './Main';
 
 function OrderPage() {
 
@@ -9,17 +11,13 @@ function OrderPage() {
 
     return (
         <OrderPageStyle>
-            navbar
             <div className='container'>
-                <div className='navbar'>
-                <h1>Bonjour {username} </h1>
-           <Link to="/">
-              <button > Deconnexion </button>
-           </Link>
-                </div>
+                <Navbar username = {username}/>
+               
+                <Main/>
             
             </div>
-             <div className='main'> Main </div>
+             
         </OrderPageStyle>
 
     )
@@ -42,14 +40,6 @@ qlign-items: center;
     flex-direction:column;
 }
 
-.navbar {
-    background:blue;
-    height: 10vh;
-}
-.main {
-    background:green;
-    /* height:(95vh - 10vh);*/
-    flex:1;
 
-}
+
 `
