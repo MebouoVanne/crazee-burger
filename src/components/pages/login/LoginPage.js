@@ -1,16 +1,37 @@
-import React from 'react'
 import LoginForm from './LoginForm'
+import { styled } from 'styled-components'
+import Logo from '../../reusable-ui/Logo'
 
-function LoginPage() {
-
-  
-
-    
+export default function LoginPage() {
+   
   return (
-    <div>
-    <LoginForm/>
-    </div>
+    <LoginPageStyled>
+      <Logo/>
+      <LoginForm/>
+    </LoginPageStyled>
   )
 }
 
-export default LoginPage
+
+const  LoginPageStyled= styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+      background: url("/images/burger-background.jpg") rgba(0,0,0,0.7);
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: darken;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border: 0;
+      z-index: -1; 
+    
+
+`;

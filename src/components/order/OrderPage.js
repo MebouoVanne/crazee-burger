@@ -40,6 +40,4 @@ qlign-items: center;
     flex-direction:column;
 }
 
-
-
 `
