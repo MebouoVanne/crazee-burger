@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import styled from "styled-components";
 import Navbar from './Navbar';
 import Main from './Main';
+import { theme } from '../../theme';
 
 function OrderPage() {
 
@@ -31,6 +32,7 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
+border-radius: ${theme.borderRadius.extraRound};
 
 .container {
     background:red;
