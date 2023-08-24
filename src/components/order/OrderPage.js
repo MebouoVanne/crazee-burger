@@ -30,7 +30,7 @@ background:orange;
 height: 100vh;
 display: flex;
 justify-content: center;
-qlign-items: center;
+align-items: center;
 
 .container {
     background:red;
