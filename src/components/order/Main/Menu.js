@@ -3,7 +3,8 @@ import { styled } from 'styled-components';
 import { fakeMenu2 } from '../../../fakeData/fakeMenu';
 import { useState } from 'react';
 import { theme } from '../../../theme';
-import Products from './Products';
+import Card from '../../reusable-ui/Card';
+import { formatPrice } from '../../../utils/maths';
 
 export default function Menu() {
 
@@ -11,7 +12,7 @@ export default function Menu() {
     return (
         <MenuStyled>
             {menu.map((produit) => {
-                return <Products title={produit.title} price={produit.price} imageSource={produit.imageSource}/>
+                return <Card key={produit.id} title={produit.title} leftDescription={formatPrice(produit.price)} imageSource={produit.imageSource} />
             })}
         </MenuStyled>
     )
@@ -26,24 +27,5 @@ padding:50px 50px 150px;
 justify-items: center;
 box-shadow: 0px 8px 20px 8px rgba(0,0,0,0.2) inset;
 
-.produit{
-    background: red;
-    width: 240px;
-    height: 330px;
 
-    .image {
-        border: 1px solid fuchsia;
-        width: 100Px;
-        height: auto;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .description{
-        border: 1px solid fuchsia;
-    }
-}
-  
 `;
