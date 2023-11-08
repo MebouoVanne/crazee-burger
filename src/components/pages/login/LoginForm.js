@@ -71,7 +71,4 @@ const LoginFormStyled  = styled.form`
     color: white;
     font-size: 36px;
   }
-
-
-
 `;
