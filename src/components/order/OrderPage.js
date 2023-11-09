@@ -1,17 +1,28 @@
-import React, { Fragment } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import React from 'react'
+import { useParams } from 'react-router-dom'
 import styled from "styled-components";
 import Navbar from './Navbar/Navbar';
 import Main from './Main/Main';
 import { theme } from '../../theme';
+import OrderContext from '../../context/OrderContext';
+import { useState } from 'react';
 
 function OrderPage() {
+
+const [isModeAdmin, setIsModeAdmin] = useState(true)
 
  const {username}= useParams();
  console.log("username",username)
 
+ const OrderContextValue = {
+    isModeAdmin,
+    setIsModeAdmin
+ }
+
     return (
-        <OrderPageStyle>
+    
+    <OrderContext.Provider value={OrderContextValue}>
+       <OrderPageStyle>
             <div className='container'>
                 <Navbar username = {username}/>
                
@@ -20,6 +31,8 @@ function OrderPage() {
             </div>
              
         </OrderPageStyle>
+    </OrderContext.Provider>
+        
 
     )
 }

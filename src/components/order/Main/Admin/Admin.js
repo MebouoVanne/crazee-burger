@@ -11,7 +11,6 @@ export default function Admin() {
 }
 
 const AdminStyle = styled.div`
-    background: red;
     height: 250px;
     position: absolute;
     bottom:0;
