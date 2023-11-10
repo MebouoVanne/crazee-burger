@@ -15,7 +15,7 @@ display: flex;
 align-items: center;
 padding: 18px 24px;
 margin: 18px 0;
-width: 100%;
+width: 88%;
 
 .icon {
     font-size: 15px;
