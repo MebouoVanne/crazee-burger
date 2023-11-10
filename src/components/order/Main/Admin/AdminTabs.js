@@ -93,8 +93,7 @@ export default function AdminTabs() {
 
         { tabsConfig.map((tab) => {
             return(
-         <Tabs label={tab.label} Icon={tab.Icon}  onClick={tab.onClick} className={tab.className}/>
-
+                <Tabs label={tab.label} Icon={tab.Icon}  onClick={tab.onClick} className={tab.className}/>
             )
             
          })}
