@@ -10,13 +10,22 @@ import { useState } from 'react';
 function OrderPage() {
 
 const [isModeAdmin, setIsModeAdmin] = useState(true)
+const [isCollapsed, setIsCollapsed] = useState(false)
+const [isAddSelected, setIsAddSelected] = useState(true)
+const [isEditSelected, setIsEditSelected] = useState(false)
 
  const {username}= useParams();
  console.log("username",username)
 
  const OrderContextValue = {
     isModeAdmin,
-    setIsModeAdmin
+    setIsModeAdmin,
+    isCollapsed, 
+    setIsCollapsed,
+    isAddSelected, 
+    setIsAddSelected,
+    isEditSelected,
+    setIsEditSelected
  }
 
     return (
